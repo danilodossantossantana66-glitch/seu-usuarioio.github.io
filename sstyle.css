@@ -1,0 +1,96 @@
+:root {
+    --fundo: #0f3d3e;
+    --fundo-escuro: #092f35;
+    --cartao: #174f52;
+    --linha: #226568;
+    --texto: #f4f1de;
+    --texto-suave: #c8d8cf;
+    --destaque: #e7c873;
+    --destaque-escuro: #302d1b;
+}
+
+body {
+    background: linear-gradient(135deg, var(--fundo-escuro), var(--fundo));
+    color: var(--texto);
+    min-height: 100vh;
+    margin: 10px;
+    padding: 40px 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+}
+h1 {
+    text-align: center;
+    color: var(--destaque);
+    letter-spacing: 2px;
+    }
+    h3 {
+        text-align: center;
+        color: var(--destaque);
+        font: 1em sans-serif;
+    }
+.card-ia{
+    align-items: center;
+    background: var(--cartao);
+    box-shadow: 0 12px 25px rgba(4, 25, 29, 0.3);
+    border-radius: 20px;
+    width: 400px;
+    padding: 30px 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 6px;
+}
+
+tbody tr {
+    background-color: var(--linha);
+    color: var(--texto-suave);
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+tbody tr:hover {
+    background-color: var(--destaque);
+    color: var(--destaque-escuro);
+    transform: translateX(6px);
+}
+
+tbody td {
+    padding: 8px 10px;
+}
+
+.card-code {
+    background: var(--cartao);
+    box-shadow: 0 12px 25px rgba(4, 25, 29, 0.3);
+    border-radius: 20px;
+    width: 400px;
+    padding: 30px 20px;
+}
+
+.submit {
+    border: 2px solid var(--destaque);
+    border-radius: 999px;
+    background-color: transparent;
+    color: var(--destaque);
+    padding: 10px 22px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.submit::before {
+    content: "← ";
+}
+
+.submit:hover,
+.submit:focus-visible {
+    background-color: var(--destaque);
+    color: var(--destaque-escuro);
+    transform: translateY(-2px);
+}

@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --fundo: #092f35;
+  --fundo-claro: #0f3d3e;
+  --cartao: #174f52;
+  --texto: #f4f1de;
+  --texto-suave: #c8d8cf;
+  --destaque: #e7c873;
+  --destaque-escuro: #302d1b;
+}
+
+body {
+  background: linear-gradient(135deg, var(--fundo), var(--fundo-claro));
+  color: var(--texto);
+    min-height: 100vh;
+  margin: 0;
+  padding: 48px 20px;
+  flex-direction: column;
+    align-items: center;
+  justify-content: flex-start;
+    display: flex;
+  gap: 24px;
+}
+ 
+.foto-container {
+  width: min(300px, 80vw);
+  height: min(300px, 80vw);
+}
+
+.foto {
+  display: block;
+  width: min(300px, 80vw);
+  height: min(300px, 80vw);
+  border-radius: 50%;
+  border: 5px solid var(--destaque);
+  padding: 4px;
+  object-fit: cover;
+  box-shadow: 0 16px 30px rgba(4, 25, 29, 0.4);
+}
+
+h1 {
+  margin: 0;
+  color: var(--destaque);
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.descriçao {
+  width: min(680px, 100%);
+  margin: 0;
+  padding: 28px;
+  color: var(--texto-suave);
+  background: var(--cartao);
+  border: 1px solid rgba(231, 200, 115, 0.25);
+  border-radius: 18px;
+  box-shadow: 0 12px 25px rgba(4, 25, 29, 0.3);
+  text-align: center;
+}
+
+.descriçao h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.botao-cursos {
+  border: 2px solid var(--destaque);
+  border-radius: 999px;
+  background-color: var(--destaque);
+  color: var(--destaque-escuro);
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.botao-cursos:hover,
+.botao-cursos:focus-visible {
+  background-color: transparent;
+  color: var(--destaque);
+  transform: translateY(-2px);
+}
+
+footer {
+  width: 100%;
+  max-width: 680px;
+  padding: 24px;
+  margin:  0 auto;
+  background-color: rgba(9, 47, 53, 0.55);
+  border-radius: 18px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0 0 18px;
+  color: var(--destaque);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+footer .contatos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+footer .contatos a {
+  text-decoration: none;
+  display: inline-flex;
+}
+
+footer .contatos img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+footer .contatos img:hover {
+  transform: scale(1.15);
+}
+
